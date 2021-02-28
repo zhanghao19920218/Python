@@ -234,3 +234,82 @@ my_foods[1] = 'apple'
 print(my_foods)
 print(friend_foods)
 ```
+
+## 5 if语句
+> `if`语句让你能够检查程序的当前状态
+
+### 5.1 一个简单示例
+```python
+cars = ['audi', 'bmw', 'subaru', 'toyota']
+for car in cars:
+    if car == 'bmw':
+        print(car.upper())
+    else:
+        print(car.title())
+```
+
+### 5.2 条件测试
+每句`if`语句的核心都是一个值为`True`或`False`的表达式，这种表达式成为**条件测试**。Python根据条件测试的值为`True`或`False`来决定是否执行`if`语句中的代码。如果测试条件的值为`True`
+
+#### 5.2.1 检查是否相等
+#### 5.2.2 检查是否相等时忽略大小写
+#### 5.2.3 检查是否不相等
+* 使用`!=`符号
+```python
+requested_topping = 'mushrooms'
+if requested_topping != 'anchovies':
+    print('Hold the anchovies')
+```
+#### 5.2.4 数值比较
+#### 5.2.5 检查多个条件
+* 使用`and`检查多个条件
+* 为改善可读性，可将每个测试分别放在一对圆括号内，但并非必须这样做。如果你使用圆括号，测试将类似于下面这样：
+* 使用`or`检查多个条件
+
+#### 5.2.6 检查特定值是否包含在列表中
+* `in`关键字
+```shell
+>>> requested_toppings = ['mushrooms', 'onions', 'pineapple']
+❶ >>> 'mushrooms' in requested_toppings
+  True
+❷ >>> 'pepperoni' in requested_toppings
+  False
+```
+
+#### 5.2.7 检查特点值是否不包含在列表中
+```python
+banned_users = ['andrew', 'carolina', 'david']
+user = 'marie'
+
+if user not in banned_users:
+    print(f"Hello, { user }")
+else:
+    print(f"Not, { user }") 
+```
+
+### 5.3 `if`语句
+理解条件测试后，就可以编写`if`语句。`if`语句有很多种,
+
+#### 5.3.1 简单的`if`语句
+最简单的`if`语句只有一个测试和一个操作:
+```python
+if conditional_test:
+    do something
+```
+#### 5.3.2 `if-else`语句
+#### 5.3.3 `if-elif-else`语句
+```python
+age = 12
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 25
+else:
+    price = 40
+
+print(f"Your admission cost is ${price}")
+```
+* python没有块作用域?
+
+#### 5.3.4 使用多个`elif`代码块
+#### 5.3.6 测试多个条件
